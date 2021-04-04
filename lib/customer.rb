@@ -35,11 +35,13 @@ class Customer
     end
   end
 
+  # is a method that associates a waiter and meal amount to a re-visiting customer
   def new_meal_20_percent(waiter, total)
     tip = total * 0.2
     Meal.new(waiter, self, total, tip)
   end
 
+  # return the oldest customer who visited for a meal
   def self.oldest_customer
     oldest_age = 0
     oldest_customer = nil
